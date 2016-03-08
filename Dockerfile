@@ -5,4 +5,4 @@ RUN apt-get update &&\
     apt-get install -y pcp
 
 EXPOSE 44321 44322
-CMD pmcd && pmproxy -f
+CMD /usr/lib/pcp/bin/pmcd -f && /usr/lib/pcp/bin/pmproxy -f
